@@ -104,7 +104,7 @@ class GitClient(object):
                  api_token,
                  user_agent=None):
         self.__api_token = api_token
-        self.base_url = "https://api.github.com"
+        self.base_url = "https://github.toasttab.com/api/v3/"
         self.__user_agent = user_agent
         self.__session = requests.Session()
         self.__verified = False
@@ -125,7 +125,7 @@ class GitClient(object):
             raise Exception('Error: Missing api_token in config.json.')
         headers = {}
         # Endpoint: simple API call to return a single record (current User) to test access
-        url = 'https://api.github.com/user'
+        url = 'https://github.toasttab.com/api/v3/user'
         if self.__user_agent:
             headers['User-Agent'] = self.__user_agent
         headers['Accept'] = 'application/vnd.github.v3+json'
