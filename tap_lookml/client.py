@@ -104,7 +104,7 @@ class GitClient(object):
                  api_token,
                  user_agent=None):
         self.__api_token = api_token
-        self.base_url = "https://github.toasttab.com/api/v3/"
+        self.base_url = "https://github.toasttab.com/api/v3"
         self.__user_agent = user_agent
         self.__session = requests.Session()
         self.__verified = False
