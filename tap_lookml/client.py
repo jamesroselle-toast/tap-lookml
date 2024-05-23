@@ -152,7 +152,7 @@ class GitClient(object):
             self.__verified = self.check_access()
 
         if not url and path:
-            url = '{}/{}'.format(self.base_url, path)
+            url = '{}{}'.format(self.base_url, path)
 
         if 'endpoint' in kwargs:
             endpoint = kwargs['endpoint']
